@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{% load crispy_forms_tags%}
+{% block contacto%}
+<form method="post" action="">
+    {% csrf_token %}
+ {{el_form|crispy}}
+
+<input class="btn btn-primary" type="submit" value="Enviar">
+</form>
+{%endblock%}
